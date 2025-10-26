@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUST A NUT</title>
+
+    <script src="https://cdn.jsdelivr.net/gh/PsychoGoldfishNG/NewgroundsIO-JS@8c72515/dist/NewgroundsIO.min.js"></script>
+    <script src="lib/KBnM.js"></script>
+    <script src="lib/text.js"></script>
+    <script src="lib/audio.js"></script>
+
+    <style>
+        .bust{
+            background-position: 0px 0px;
+        }
+
+        .bust:hover{
+            background-position: 0px 128px;
+        }
+    </style>
+</head>
+<body style="background-color: black;" onclick="bust()">
+    <div style="width: 512px; height: 512px; position: absolute; top: calc(50vh - 256px); left: calc(50vw - 256px); background-color: white;">
+        <div class="logo" style="position: absolute; background-image: url(img/logo.png); image-rendering: pixelated; background-size: 512px; width: 512px; height: 64px; z-index: 10;"></div>
+        <div class="game" style="position: absolute; top: 64px;">
+            <div class="pressScaffold" style="width: 64px;"></div>
+            <div class="press" style="position: absolute; left: 224px; top: -64px;">
+                <div style="width: 64px; height: 108px; background-image: url(img/press.png); background-size: 128px; image-rendering: pixelated;"></div>
+                <div style="width: 64px; height: 20px; background-image: url(img/press.png); background-size: 128px; image-rendering: pixelated; background-position: 64px 0px;"></div>
+            </div>
+            <div class="pressEffect" style="position: absolute; left: 188px; top: 92px; display: none;">
+                <div style="position: absolute; width: 32px; height: 32px; background-image: url(img/smashEffect.png); background-size: 32px; image-rendering: pixelated;"></div>
+                <div style="position: absolute; left: 104px; width: 32px; height: 32px; background-image: url(img/smashEffect.png); background-size: 32px; image-rendering: pixelated; transform: scaleX(-1);"></div>
+            </div>
+            <div class="conveyor" style="position: absolute; top: 128px; width: 512px; height: 64px; background-image: url(img/conveyor.png); background-size: 64px; image-rendering: pixelated; background-position: 0px 0px;"></div>
+            <div class="nuts" style="position: absolute; top: 64px; width: 512px; height: 64px;"></div>
+            <div class="hp" style="position: absolute; top: 192px; width: 512px; height: 64px;"></div>
+            <div class="score" style="position: absolute; top: 256px; width: 512px; height: 64px;"></div>
+            <div class="bust" style="position: absolute; background-image: url(img/bustton.png); top: 320px; left: 64px; width: 384px; height: 128px; background-size: 384px; image-rendering: pixelated;"></div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+    <script src="nginit.js"></script>
+</body>
+</html>
