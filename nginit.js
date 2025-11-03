@@ -2,7 +2,7 @@ let offline = true
 
 // Set up the options for NGIO.
 var options = {
-    version: "1.0.0",
+    version: "1.2.0",
     preloadScoreBoards: true,
     preloadMedals: true,
     preloadSaveSlots: true
@@ -33,6 +33,10 @@ let ngLoop = setInterval(function(){
             // user needs to log in
             case NGIO.STATUS_READY:
                 offline = false
+                NGIO.postScore(15304, best, function(){})
+                unlockMedal(86829, best >= 1)
+                unlockMedal(86830, best >= 100)
+                if (!offline){NGIO.getScores(15304, {"period": NGIO.PERIOD_ALL_TIME,"limit": 1}, function(onlinescores, board, options){wr = onlinescores[0].value})}
                 break
         }
 
